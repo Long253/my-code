@@ -1,0 +1,58 @@
+ho = input("Mời sếp nhập họ: ")
+ten = input("Mời sếp nhập tên: ")
+
+try:
+    tuoi = int(input("Mời sếp nhập tuổi: "))
+    if tuoi < 18:
+        print("Xin lỗi, sếp chưa đủ tuổi.")
+    else:
+        print(f"Chào mừng sếp, {ho} {ten}, {tuoi} tuổi!")
+
+        while True:
+            lua_chon = input("Mời sếp chọn câu (1/2/3) hoặc chọn 4 để thoát: ")
+
+            if lua_chon == "1":
+                print("Câu hỏi: Cái gì càng nhiều càng ít?")
+                print("A. Thời gian")
+                print("B. Tiền bạc")
+                print("C. Câu trả lời")
+                print("D. Đúng sai")
+                choice = input("Mời sếp chọn A/B/C/D: ").upper()
+                if choice == "A":
+                    print("Đúng rồi!")
+                else:
+                    print("Sai rồi, đáp án là A.")
+
+            elif lua_chon == "2":
+                print("Câu hỏi: Con gì đi được cả dưới nước lẫn trên cạn, nhưng không phải là cá?")
+                print("A. Con rùa")
+                print("B. Con ếch")
+                print("C. Con rắn")
+                print("D. Con chim")
+                choice = input("Mời sếp chọn A/B/C/D: ").upper()
+                if choice == "B":
+                    print("Đúng rồi!")
+                else:
+                    print("Sai rồi, đáp án là B.")
+
+            elif lua_chon == "3":
+                print("Câu hỏi: Cái gì có thể chứa tất cả mọi thứ mà không bị nặng thêm?")
+                print("A. Không khí")
+                print("B. Đá")
+                print("C. Vũ trụ")
+                print("D. Tâm hồn")
+                choice = input("Mời sếp chọn A/B/C/D: ").upper()
+                if choice == "C":
+                    print("Đúng rồi!")
+                else:
+                    print("Sai rồi, đáp án là C.")
+
+            elif lua_chon == "4":
+                print("Cảm ơn sếp đã tham gia!")
+                print("Bye!")
+                break
+
+            else:
+                print("Lựa chọn không hợp lệ. Vui lòng chọn lại!")
+except ValueError:
+    print("Tuổi phải là một số nguyên!")
